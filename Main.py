@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd 
 #uncomment this line for mysql
-from query import *
+#from query import *
 
 #set page
 st.set_page_config(page_title="Dashboard",page_icon="🌓",layout="wide")
