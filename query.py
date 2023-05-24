@@ -1,23 +1,23 @@
-import mysql.connector
+#import mysql.connector
 import streamlit as st
-#establish connection to MYSQL
+##establish connection to MYSQL
 
-conn=mysql.connector.connect(
-    host="localhost",
-    port="3306",
-    user="root",
-    passwd="",
-    db="students"
-)
-c=conn.cursor()
+#conn=mysql.connector.connect(
+   # host="localhost",
+   # port="3306",
+   # user="root",
+  #  passwd="",
+  #  db="students"
+#)
+#c=conn.cursor()
 
 #fetchData
 
-@st.cache_data
-def viewData():
-    c.execute('select * from results_tbl order by rank asc')
-    data=c.fetchall()
-    return data
+#@st.cache_data
+#def viewData():
+   # c.execute('select * from results_tbl order by rank asc')
+   # data=c.fetchall()
+   # return data
 
 
 def UI():
