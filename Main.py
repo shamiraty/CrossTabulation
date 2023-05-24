@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd 
+#uncomment this line for mysql
 from query import *
 
 #set page
@@ -7,10 +8,11 @@ st.set_page_config(page_title="Dashboard",page_icon="🌓",layout="wide")
 
 UI()
 
-#fetch data
-result=viewData()
-df=pd.DataFrame(result,columns=["name","gender","history","geography","kiswahili","civics","maths","total","average","grade","comment","rank","stream","id"])
- 
+#uncomment these two lines if using Mysql database
+#result=viewData()
+#df=pd.DataFrame(result,columns=["name","gender","history","geography","kiswahili","civics","maths","total","average","grade","comment","rank","stream","id"])
+
+df=pd.read_csv("results.csv")
 
 #side bar: switcher
 gender=st.sidebar.multiselect(
